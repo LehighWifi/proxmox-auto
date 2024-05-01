@@ -1,7 +1,7 @@
 [global]
 keyboard = "en-us"
 country = "us"
-fqdn = "dc01.lehighwifi.network"
+fqdn = "pve1.dc01.lehighwifi.network"
 mailto = "proxmox@lehighwifi.com"
 timezone = "America/New_York"
 root_password = "u9o2Wt8zc4WF"
