@@ -1,0 +1,13 @@
+[global]
+keyboard = "en-us"
+country = "us"
+fqdn = "dc01.lehighwifi.network"
+mailto = "proxmox@lehighwifi.com"
+timezone = "America/New_York"
+root_password = "u9o2Wt8zc4WF"
+root_ssh_keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA9VtDKXxFuKqam6cC3Xim8a4Y9j8E1+SOASJSBVfO2S AnthonyP"
+]
+
+[network]
+source = "from-dhcp"
