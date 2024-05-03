@@ -1,3 +1,4 @@
 venv
 templates/template.toml
 templates/*.bak
+*.bak
