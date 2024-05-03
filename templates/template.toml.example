@@ -1,0 +1,16 @@
+[global]
+keyboard = "en-us"
+country = "us"
+fqdn = "{{ fqdn }}"
+mailto = "proxmox@example.com"
+timezone = "America/New_York"
+root_password = "ChangeMe"
+root_ssh_keys = [ "ssh-ed25519 ChangeMeChangeMeChangeMeChangeMeChangeMe ChangeMe",]
+
+[network]
+source = "from-dhcp"
+
+[disk-setup]
+filesystem = "zfs"
+zfs.raid = "raid1"
+filter.ID_MODEL = "SSDSCKK*"
