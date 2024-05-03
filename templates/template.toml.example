@@ -1,16 +1,27 @@
+# Example TOML Answer file for proxmox see details at https://pve.proxmox.com/wiki/Automated_Installation
+
 [global]
 keyboard = "en-us"
 country = "us"
-fqdn = "{{ fqdn }}"
+fqdn = "{{ fqdn }}" # Filled by python when rendered
 mailto = "proxmox@example.com"
 timezone = "America/New_York"
 root_password = "ChangeMe"
 root_ssh_keys = [ "ssh-ed25519 ChangeMeChangeMeChangeMeChangeMeChangeMe ChangeMe",]
+reboot_on_error = false
 
 [network]
-source = "from-dhcp"
+source = "from-dhcp" 
+# source = "from-answer
+# cidr = "10.10.10.10/24" 
+# dns = "10.10.10.1"
+# gateway = "10.10.10.1"
+# filter.ID_NET_NAME_MAC = "*e43d1afa379a" 
 
 [disk-setup]
 filesystem = "zfs"
 zfs.raid = "raid1"
-filter.ID_MODEL = "SSDSCKK*"
+filter_match = "any"
+# It appears different filter types are required to use multiple filters. You can not use filter.ID_MODEL twice
+filter.ID_MODEL = "*SSDSCKK*" # Intel m.2 Sata SSD
+filter.ID_SERIAL = "*WDS250*" # Western Digital Blue 250G Drives
